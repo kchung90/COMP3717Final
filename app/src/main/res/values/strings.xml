@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">COMP3717Final</string>
+    <string name="app_name">Movie App</string>
+    <string name="add_a_movie_to_your_list">Add a Movie to Your List</string>
+    <string name="cancel">CANCEL</string>
+    <string name="url">URL</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="add">ADD</string>
+    <string name="your_movie_list">Your Movie List</string>
 </resources>

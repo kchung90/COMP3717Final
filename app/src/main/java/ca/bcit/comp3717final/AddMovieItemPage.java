@@ -17,6 +17,7 @@ public class AddMovieItemPage extends AppCompatActivity {
     EditText descriptionEditText;
     EditText urlEditText;
     Button addButton;
+    Button cancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,12 @@ public class AddMovieItemPage extends AppCompatActivity {
         descriptionEditText = (EditText) findViewById(R.id.description);
         urlEditText = (EditText) findViewById(R.id.movie_url);
         addButton = (Button) findViewById(R.id.add_movie);
+        cancelButton = (Button) findViewById(R.id.cancel);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference();
+                DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
 
                 String titleString = titleEditText.getText().toString();
                 String descString = descriptionEditText.getText().toString();
@@ -48,6 +49,13 @@ public class AddMovieItemPage extends AppCompatActivity {
                 } else {
                     Toast.makeText(v.getContext(), "Please make sure all fields are filled.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddMovieItemPage.this, MovieListPage.class));
             }
         });
 
