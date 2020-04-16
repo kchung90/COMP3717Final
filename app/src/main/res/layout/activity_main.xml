@@ -8,61 +8,43 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"/>
+
+    <EditText
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:hint="Enter a title of the movie" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"/>
 
-        <EditText
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:hint="Enter a title of the movie" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:hint="Enter a short description" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMDB URL"/>
 
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:hint="Enter a short description" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/movie_url"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:hint="Enter a url to IMDB" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IMDB URL"/>
-
-        <EditText
-            android:id="@+id/movie_url"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:hint="Enter a url to IMDB" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/add_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD" />
 
 </LinearLayout>
